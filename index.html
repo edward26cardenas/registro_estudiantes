@@ -1,0 +1,384 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Academic | Sistema Académico</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="brand">
+                <div class="brand-icon">A</div>
+
+                <div>
+                    <h2>Academic</h2>
+                    <span>GESTIÓN ESTUDIANTIL</span>
+                </div>
+            </div>
+
+            <div class="menu-title">MENÚ PRINCIPAL</div>
+
+            <nav class="navigation">
+
+                <a href="#" class="nav-link active">
+                    <span>▦</span>
+                    Registro
+                </a>
+
+                <a href="#resultados" class="nav-link">
+                    <span>▤</span>
+                    Resultados
+                </a>
+
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="profile">
+                    <div class="profile-avatar">A</div>
+
+                    <div>
+                        <strong>Administrador</strong>
+                        <small>Sistema académico</small>
+                    </div>
+                </div>
+            </div>
+
+        </aside>
+
+
+        <!-- CONTENIDO PRINCIPAL -->
+
+        <main class="main">
+
+            <header class="topbar">
+
+                <div>
+                    <p class="breadcrumb">Panel principal / Registro</p>
+
+                    <h1>Registro de estudiantes</h1>
+
+                    <p class="subtitle">
+                        Administra la información y las calificaciones académicas.
+                    </p>
+                </div>
+
+                <div class="date">
+                    <span class="status-dot"></span>
+                    Sistema activo
+                </div>
+
+            </header>
+
+
+            <!-- FORMULARIO -->
+
+            <section class="content-grid">
+
+                <div class="form-container">
+
+                    <!-- DATOS PERSONALES -->
+
+                    <div class="card">
+
+                        <div class="section-heading">
+
+                            <div class="section-icon">01</div>
+
+                            <div>
+                                <h2>Información personal</h2>
+                                <p>Ingresa los datos del estudiante.</p>
+                            </div>
+
+                        </div>
+
+
+                        <form id="studentForm">
+
+                            <div class="form-grid">
+
+                                <div class="field full">
+                                    <label for="nombre">Nombre completo</label>
+
+                                    <input
+                                        type="text"
+                                        id="nombre"
+                                        placeholder="Ej. Juan Carlos Pérez"
+                                        required
+                                    >
+                                </div>
+
+
+                                <div class="field">
+                                    <label for="edad">Edad</label>
+
+                                    <input
+                                        type="number"
+                                        id="edad"
+                                        placeholder="Ej. 18"
+                                        min="1"
+                                        required
+                                    >
+                                </div>
+
+
+                                <div class="field">
+                                    <label for="ti">Documento de identidad</label>
+
+                                    <input
+                                        type="number"
+                                        id="ti"
+                                        placeholder="Número de documento"
+                                        required
+                                    >
+                                </div>
+
+
+                                <div class="field full">
+                                    <label for="correo">Correo electrónico</label>
+
+                                    <input
+                                        type="email"
+                                        id="correo"
+                                        placeholder="estudiante@correo.com"
+                                        required
+                                    >
+                                </div>
+
+
+                                <div class="field full">
+                                    <label for="curso">Curso</label>
+
+                                    <input
+                                        type="text"
+                                        id="curso"
+                                        placeholder="Ej. 1002"
+                                        required
+                                    >
+                                </div>
+
+                            </div>
+
+
+                            <div class="divider"></div>
+
+
+                            <!-- CALIFICACIONES -->
+
+                            <div class="section-heading">
+
+                                <div class="section-icon">02</div>
+
+                                <div>
+                                    <h2>Calificaciones</h2>
+                                    <p>Ingresa las cinco notas del estudiante.</p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="grades-grid">
+
+                                <div class="grade-field">
+                                    <label>NOTA 01</label>
+                                    <input type="number" class="nota" placeholder="0.0" step="any" required>
+                                </div>
+
+                                <div class="grade-field">
+                                    <label>NOTA 02</label>
+                                    <input type="number" class="nota" placeholder="0.0" step="any" required>
+                                </div>
+
+                                <div class="grade-field">
+                                    <label>NOTA 03</label>
+                                    <input type="number" class="nota" placeholder="0.0" step="any" required>
+                                </div>
+
+                                <div class="grade-field">
+                                    <label>NOTA 04</label>
+                                    <input type="number" class="nota" placeholder="0.0" step="any" required>
+                                </div>
+
+                                <div class="grade-field">
+                                    <label>NOTA 05</label>
+                                    <input type="number" class="nota" placeholder="0.0" step="any" required>
+                                </div>
+
+                            </div>
+
+
+                            <!-- BOTONES -->
+
+                            <div class="buttons">
+
+                                <button type="submit" class="btn-primary">
+                                    Calcular resultado
+                                    <span>→</span>
+                                </button>
+
+                                <button type="reset" class="btn-secondary" id="limpiar">
+                                    Limpiar
+                                </button>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PANEL DERECHO -->
+
+                <aside class="right-panel">
+
+                    <div class="info-card">
+
+                        <div class="info-top">
+                            <span class="info-icon">✦</span>
+                            <span class="info-label">SISTEMA ACADÉMICO</span>
+                        </div>
+
+                        <h3>Control de calificaciones</h3>
+
+                        <p>
+                            Registra los datos de tus estudiantes y consulta
+                            sus resultados académicos de manera sencilla.
+                        </p>
+
+                        <div class="info-bottom">
+                            <span>Evaluación</span>
+                            <strong>5 notas</strong>
+                        </div>
+
+                    </div>
+
+
+                    <!-- RESULTADOS -->
+
+                    <div class="card results-card" id="resultados">
+
+                        <div class="results-header">
+                            <div>
+                                <h2>Resultados</h2>
+                                <p>Resumen del estudiante</p>
+                            </div>
+
+                            <span class="result-icon">▤</span>
+                        </div>
+
+
+                        <div id="emptyState" class="empty-state">
+
+                            <div class="empty-icon">◎</div>
+
+                            <h3>Sin resultados</h3>
+
+                            <p>
+                                Completa el formulario para visualizar
+                                los resultados del estudiante.
+                            </p>
+
+                        </div>
+
+
+                        <div id="resultContent" class="result-content hidden">
+
+                            <div class="student-summary">
+
+                                <div class="student-avatar" id="avatar">E</div>
+
+                                <div>
+                                    <h3 id="resNombre">Estudiante</h3>
+                                    <p id="resCurso">Curso</p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="result-details">
+
+                                <div class="detail">
+                                    <span>Edad</span>
+                                    <strong id="resEdad">-</strong>
+                                </div>
+
+                                <div class="detail">
+                                    <span>Documento</span>
+                                    <strong id="resTI">-</strong>
+                                </div>
+
+                                <div class="detail">
+                                    <span>Correo</span>
+                                    <strong id="resCorreo">-</strong>
+                                </div>
+
+                            </div>
+
+
+                            <div class="grades-result">
+
+                                <span>Notas registradas</span>
+
+                                <div id="resNotas" class="notes-list"></div>
+
+                            </div>
+
+
+                            <div class="average-box">
+
+                                <div>
+                                    <span>Promedio final</span>
+                                    <h2 id="resPromedio">0.0</h2>
+                                </div>
+
+                                <div id="resEstado" class="status-badge">
+                                    -
+                                </div>
+
+                            </div>
+
+                            <button id="nuevoRegistro" class="btn-new">
+                                + Nuevo estudiante
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </aside>
+
+            </section>
+
+
+            <footer>
+                <p>© 2026 Academic. Sistema de gestión estudiantil.</p>
+                <p>Desarrollado con HTML, CSS y JavaScript</p>
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
